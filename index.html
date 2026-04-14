@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Finance Tracker Pro</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="top-bar">
+    <h1>Finance Tracker</h1>
+    <button onclick="toggleTheme()" id="themeBtn">🌙</button>
+  </div>
+
+  <div class="balance">
+    Balance: ₹<span id="balance">0</span>
+  </div>
+
+  <div class="form">
+    <input type="text" id="desc" placeholder="Description">
+    <input type="number" id="amount" placeholder="Amount">
+
+    <select id="type">
+      <option value="income">Income</option>
+      <option value="expense">Expense</option>
+    </select>
+
+    <button onclick="addTransaction()">Add Transaction</button>
+  </div>
+
+  <div class="summary">
+    <div>Income: ₹<span id="income">0</span></div>
+    <div>Expense: ₹<span id="expense">0</span></div>
+  </div>
+
+  <canvas id="chart"></canvas>
+
+  <ul id="list"></ul>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
